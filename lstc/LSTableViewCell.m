@@ -8,7 +8,43 @@
 
 #import "LSTableViewCell.h"
 
+@interface LSTableViewCell()
+
+
+
+@end
+
 @implementation LSTableViewCell
+
++ (LSTableViewCell *)cellForTableView:(UITableView *)tableView model:(LSTCModel *)model{
+    NSString *identifier = NSStringFromClass([LSTableViewCell class]);
+    LSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[LSTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    return cell;
+}
+
+- (YYLabel *)tagNameLabel{
+    if (!_tagNameLabel) {
+        _tagNameLabel = [YYLabel new];
+    }
+    return _tagNameLabel;
+}
+
+- (YYLabel *)detailTagNameLabel{
+    if (!_detailTagNameLabel) {
+        _detailTagNameLabel = [YYLabel new];
+    }
+    return _detailTagNameLabel;
+}
+
+- (UIImageView *)bigImageView{
+    if (!_bigImageView) {
+        _bigImageView = [[UIImageView alloc] init];
+    }
+    return _bigImageView;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];

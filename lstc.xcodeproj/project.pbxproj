@@ -23,6 +23,7 @@
 		6C5E202122C0FFDD00D8A454 /* LSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5E202022C0FFDD00D8A454 /* LSTableViewCell.m */; };
 		6C5E202422C1029A00D8A454 /* LSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5E202322C1029A00D8A454 /* LSRequest.m */; };
 		6C5E202922C10B5700D8A454 /* NSString+LSMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5E202822C10B5700D8A454 /* NSString+LSMD5.m */; };
+		E38E75D222C1FC7E001376E6 /* LSTableViewCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E38E75D122C1FC7E001376E6 /* LSTableViewCellFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02D9652CDBCB489D9339009D /* Pods-lstcUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstcUITests.debug.xcconfig"; path = "Target Support Files/Pods-lstcUITests/Pods-lstcUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		07EFD567037DE17C1BD074BA /* Pods-lstc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstc.debug.xcconfig"; path = "Target Support Files/Pods-lstc/Pods-lstc.debug.xcconfig"; sourceTree = "<group>"; };
-		35C49DE738C2CB72202FC466 /* Pods-lstc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstc.release.xcconfig"; path = "Target Support Files/Pods-lstc/Pods-lstc.release.xcconfig"; sourceTree = "<group>"; };
+		0716E2605E1E035D898C98C3 /* Pods-lstcUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstcUITests.release.xcconfig"; path = "Target Support Files/Pods-lstcUITests/Pods-lstcUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3A23D21BB121A7563E2865E2 /* libPods-lstcTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lstcTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		45C794AF60F2643C77344598 /* Pods-lstcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstcTests.release.xcconfig"; path = "Target Support Files/Pods-lstcTests/Pods-lstcTests.release.xcconfig"; sourceTree = "<group>"; };
+		3DFB57385534A4A163037AB8 /* Pods-lstcUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstcUITests.debug.xcconfig"; path = "Target Support Files/Pods-lstcUITests/Pods-lstcUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C5E1FE422C0FF3200D8A454 /* lstc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lstc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5E1FE722C0FF3200D8A454 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C5E1FE822C0FF3200D8A454 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,10 +75,14 @@
 		6C5E202622C1070700D8A454 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		6C5E202722C10B5700D8A454 /* NSString+LSMD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSMD5.h"; sourceTree = "<group>"; };
 		6C5E202822C10B5700D8A454 /* NSString+LSMD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSMD5.m"; sourceTree = "<group>"; };
+		6C9BE63E77B1F4C886802508 /* Pods-lstcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstcTests.release.xcconfig"; path = "Target Support Files/Pods-lstcTests/Pods-lstcTests.release.xcconfig"; sourceTree = "<group>"; };
 		8473A3E5458B33CC854D5E94 /* libPods-lstcUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lstcUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFEA6E87D687EFAC70D1279D /* Pods-lstcUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstcUITests.release.xcconfig"; path = "Target Support Files/Pods-lstcUITests/Pods-lstcUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A3231D986198203FF84E94F8 /* Pods-lstc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstc.debug.xcconfig"; path = "Target Support Files/Pods-lstc/Pods-lstc.debug.xcconfig"; sourceTree = "<group>"; };
+		E31FD499D5B046334D665326 /* Pods-lstc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstc.release.xcconfig"; path = "Target Support Files/Pods-lstc/Pods-lstc.release.xcconfig"; sourceTree = "<group>"; };
+		E38E75D022C1FC7E001376E6 /* LSTableViewCellFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSTableViewCellFrame.h; sourceTree = "<group>"; };
+		E38E75D122C1FC7E001376E6 /* LSTableViewCellFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSTableViewCellFrame.m; sourceTree = "<group>"; };
 		F0F973F2900095E4E700D8F0 /* libPods-lstc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lstc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC4411C73C2E9AFD3275F154 /* Pods-lstcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstcTests.debug.xcconfig"; path = "Target Support Files/Pods-lstcTests/Pods-lstcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD1AA23BDBFA12297045373D /* Pods-lstcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lstcTests.debug.xcconfig"; path = "Target Support Files/Pods-lstcTests/Pods-lstcTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 				6C5E201D22C0FFC800D8A454 /* LSTCModel.m */,
 				6C5E201F22C0FFDD00D8A454 /* LSTableViewCell.h */,
 				6C5E202022C0FFDD00D8A454 /* LSTableViewCell.m */,
+				E38E75D022C1FC7E001376E6 /* LSTableViewCellFrame.h */,
+				E38E75D122C1FC7E001376E6 /* LSTableViewCellFrame.m */,
 				6C5E202222C1029A00D8A454 /* LSRequest.h */,
 				6C5E202322C1029A00D8A454 /* LSRequest.m */,
 				6C5E202722C10B5700D8A454 /* NSString+LSMD5.h */,
@@ -191,12 +196,12 @@
 		82E001F481CC6A7933E3388D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				07EFD567037DE17C1BD074BA /* Pods-lstc.debug.xcconfig */,
-				35C49DE738C2CB72202FC466 /* Pods-lstc.release.xcconfig */,
-				FC4411C73C2E9AFD3275F154 /* Pods-lstcTests.debug.xcconfig */,
-				45C794AF60F2643C77344598 /* Pods-lstcTests.release.xcconfig */,
-				02D9652CDBCB489D9339009D /* Pods-lstcUITests.debug.xcconfig */,
-				BFEA6E87D687EFAC70D1279D /* Pods-lstcUITests.release.xcconfig */,
+				A3231D986198203FF84E94F8 /* Pods-lstc.debug.xcconfig */,
+				E31FD499D5B046334D665326 /* Pods-lstc.release.xcconfig */,
+				FD1AA23BDBFA12297045373D /* Pods-lstcTests.debug.xcconfig */,
+				6C9BE63E77B1F4C886802508 /* Pods-lstcTests.release.xcconfig */,
+				3DFB57385534A4A163037AB8 /* Pods-lstcUITests.debug.xcconfig */,
+				0716E2605E1E035D898C98C3 /* Pods-lstcUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E38E75D222C1FC7E001376E6 /* LSTableViewCellFrame.m in Sources */,
 				6C5E201B22C0FFB500D8A454 /* LSTCViewController.m in Sources */,
 				6C5E1FEC22C0FF3200D8A454 /* ViewController.m in Sources */,
 				6C5E201E22C0FFC800D8A454 /* LSTCModel.m in Sources */,
@@ -580,7 +586,7 @@
 		};
 		6C5E201122C0FF3400D8A454 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07EFD567037DE17C1BD074BA /* Pods-lstc.debug.xcconfig */;
+			baseConfigurationReference = A3231D986198203FF84E94F8 /* Pods-lstc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -588,6 +594,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/lstc/PrefixHeader.pch";
 				INFOPLIST_FILE = lstc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,7 +607,7 @@
 		};
 		6C5E201222C0FF3400D8A454 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C49DE738C2CB72202FC466 /* Pods-lstc.release.xcconfig */;
+			baseConfigurationReference = E31FD499D5B046334D665326 /* Pods-lstc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +615,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/lstc/PrefixHeader.pch";
 				INFOPLIST_FILE = lstc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,7 +628,7 @@
 		};
 		6C5E201422C0FF3400D8A454 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC4411C73C2E9AFD3275F154 /* Pods-lstcTests.debug.xcconfig */;
+			baseConfigurationReference = FD1AA23BDBFA12297045373D /* Pods-lstcTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -639,7 +647,7 @@
 		};
 		6C5E201522C0FF3400D8A454 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45C794AF60F2643C77344598 /* Pods-lstcTests.release.xcconfig */;
+			baseConfigurationReference = 6C9BE63E77B1F4C886802508 /* Pods-lstcTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -658,7 +666,7 @@
 		};
 		6C5E201722C0FF3400D8A454 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02D9652CDBCB489D9339009D /* Pods-lstcUITests.debug.xcconfig */;
+			baseConfigurationReference = 3DFB57385534A4A163037AB8 /* Pods-lstcUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = lstcUITests/Info.plist;
@@ -676,7 +684,7 @@
 		};
 		6C5E201822C0FF3400D8A454 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFEA6E87D687EFAC70D1279D /* Pods-lstcUITests.release.xcconfig */;
+			baseConfigurationReference = 0716E2605E1E035D898C98C3 /* Pods-lstcUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = lstcUITests/Info.plist;

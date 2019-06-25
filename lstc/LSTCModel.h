@@ -11,7 +11,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSTCModel : NSObject
+@property (nonatomic, copy)NSString *tag_name;
+@property (nonatomic, copy)NSString *tag_introduce;
 
+@property (nonatomic, copy)NSString *small_icon_url;
+@property (nonatomic, copy)NSString *icon_name;
+
+@property (nonatomic, assign)CGFloat cellHeight;
 @end
 
 NS_ASSUME_NONNULL_END

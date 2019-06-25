@@ -8,18 +8,20 @@
 
 #import "ViewController.h"
 #import "LSRequest.h"
+#import "LSTCViewController.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+- (IBAction)jumptoNext:(id)sender {
+    LSTCViewController *vc = [[LSTCViewController alloc] init];
+    [self presentViewController:vc animated:NO completion:nil];
+}
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    LSRequest *request = [[LSRequest alloc] init];
-    [request getToken:kRequestToken method:GET];
+    [super viewDidLoad]; 
 }
 
 

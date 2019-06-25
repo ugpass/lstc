@@ -7,10 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSTCModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSTableViewCell : UITableViewCell
+
+@property (nonatomic, strong)YYLabel *tagNameLabel;
+
+@property (nonatomic, strong)YYLabel *detailTagNameLabel;
+
+@property (nonatomic, strong)UIImageView *bigImageView;
+
+@property (nonatomic, strong)UIImageView *smallImageView;
+
++ (LSTableViewCell *)cellForTableView:(UITableView *)tableView model:(LSTCModel *)model;
 
 @end
 

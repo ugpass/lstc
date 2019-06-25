@@ -16,7 +16,7 @@
     return self;
 }
 
-- (NSString *)getToken:(NSString *)url method:(RequestMethod)method{
+/*- (NSString *)getToken:(NSString *)url method:(RequestMethod)method{
     _url = url;
     _method = method;
     int time = [self getTimeStamp];
@@ -47,15 +47,16 @@
         }else{
             NSLog(@"%@",responseObject);
         }
-    }];*/ 
+    }];
     return nil;
 }
-
+*/
+/*
 - (int)getTimeStamp{
     NSDate* date = [NSDate dateWithTimeIntervalSinceNow:0];//获取当前时间0秒后的时间
     NSTimeInterval time=[date timeIntervalSince1970];// *1000 是精确到毫秒，不乘就是精确到秒
     
     return (int)time;
-}
+}*/
 
 @end

@@ -5,6 +5,9 @@ target 'lstc' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 pod 'AFNetworking','~>3.2.1'
+pod 'MJExtension','~>3.0.17'
+pod 'SDWebImage','~>5.0.6'
+pod 'YYKit','~>1.0.9'
   # Pods for lstc
 
   target 'lstcTests' do

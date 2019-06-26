@@ -7,15 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LSTCModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSTableViewCellFrame : NSObject
 
-@property (nonatomic, assign)CGSize tagNameLabelFrame;
-@property (nonatomic, assign)CGSize detailTagNameLabelFrame;
-@property (nonatomic, assign)CGSize bigImageViewFrame;
-@property (nonatomic, assign)CGSize smallImageViewFrame;
+@property (nonatomic, assign)CGRect tagNameLabelFrame;
+@property (nonatomic, assign)CGRect detailTagNameLabelFrame;
+@property (nonatomic, assign)CGRect bigImageViewFrame;
+@property (nonatomic, assign)CGRect smallImageViewFrame;
+
+@property (nonatomic, assign)CGFloat cellHeight;
+
+@property (nonatomic, strong)LSTCModel *tcmodel;
 
 @end
 

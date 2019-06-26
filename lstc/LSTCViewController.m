@@ -34,6 +34,7 @@
     CFRunLoopRemoveObserver(runloop, observer, runloopMode);
     CFRelease(observer);
     */
+    
     [self.view addSubview:self.tableView];
     [self loadData];
 }
@@ -54,9 +55,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    LSTCModel *model = self.dataSource[indexPath.row];
-    LSTableViewCell *cell = [LSTableViewCell cellForTableView:tableView model:model];
-     
+    LSTableViewCell *cell = [LSTableViewCell cellForTableView:tableView];
     return cell;
 }
 
@@ -69,8 +68,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    LSTCModel *model = self.dataSource[indexPath.row];
-    return model.cellHeight;
+    LSTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    return cell.cellFrame.cellHeight;
 }
 
 #pragma mark - loadData

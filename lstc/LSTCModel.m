@@ -8,10 +8,6 @@
 
 #import "LSTCModel.h"
 
-@implementation LSTCModel
-
-- (CGFloat)cellHeight{
-    return 100;
-}
+@implementation LSTCModel 
 
 @end

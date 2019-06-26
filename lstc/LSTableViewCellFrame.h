@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign)CGRect tagNameLabelFrame;
 @property (nonatomic, assign)CGRect detailTagNameLabelFrame;
+@property (nonatomic,strong) YYTextLayout *detailTagNameLabelLayout;
 @property (nonatomic, assign)CGRect bigImageViewFrame;
 @property (nonatomic, assign)CGRect smallImageViewFrame;
 

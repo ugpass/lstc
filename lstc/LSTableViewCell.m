@@ -66,6 +66,8 @@
     if (!_detailTagNameLabel) {
         _detailTagNameLabel = [YYLabel new];
         _detailTagNameLabel.displaysAsynchronously = YES;
+        _detailTagNameLabel.numberOfLines = 0;
+        _detailTagNameLabel.lineBreakMode = NSLineBreakByCharWrapping;
         [self.contentView addSubview:_detailTagNameLabel];
     }
     return _detailTagNameLabel;

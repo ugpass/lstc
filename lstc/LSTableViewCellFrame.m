@@ -24,17 +24,16 @@
     NSMutableAttributedString *detailText = [[NSMutableAttributedString alloc] initWithString:tcmodel.tag_introduce];
     
     // Create text container
-//    YYTextContainer *container = [YYTextContainer new];
-//    container.size = CGSizeMake(kScreenWidth-74, CGFLOAT_MAX);
-//    container.maximumNumberOfRows = 0;
-//    
-//    // Generate a text layout.
-//    _detailTagNameLabelFrame = [YYTextLayout layoutWithContainer:container text:detailText];
+    YYTextContainer *container = [YYTextContainer new];
+    container.size = CGSizeMake(kScreenWidth-74, CGFLOAT_MAX);
+    container.maximumNumberOfRows = 0;
     
-    _detailTagNameLabelFrame = CGRectMake(10, 10 + 44 + 10 + 100 + 10, kScreenWidth-74, 100);
+    // Generate a text layout.
+    _detailTagNameLabelLayout = [YYTextLayout layoutWithContainer:container text:detailText];
     
+    _detailTagNameLabelFrame = CGRectMake(10, 174, _detailTagNameLabelLayout.textBoundingSize.width, _detailTagNameLabelLayout.textBoundingSize.height);
     
-    _cellHeight = 10 + 44 + 10 + 100 + 100 + 10;
+    _cellHeight = 10 + 44 + 10 + 100 + _detailTagNameLabelLayout.textBoundingSize.height + 10;
     
 }
 

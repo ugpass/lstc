@@ -9,16 +9,24 @@
 #import "LSTCViewController.h"
 #import "LSTCModel.h"
 #import "LSTableViewCell.h"
+#import "LSTableViewCellFrame.h"
 
 @interface LSTCViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)UITableView *tableView;
 
-@property (nonatomic, strong)NSArray *dataSource;
+@property (nonatomic, strong)NSMutableArray *cellFramesArray;
 
 @end
 
 @implementation LSTCViewController
+
+- (NSMutableArray *)cellFramesArray{
+    if (!_cellFramesArray) {
+        _cellFramesArray = [NSMutableArray array];
+    }
+    return _cellFramesArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,25 +59,19 @@
 
 #pragma mark - dataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataSource.count;
+    return self.cellFramesArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     LSTableViewCell *cell = [LSTableViewCell cellForTableView:tableView];
+    cell.cellFrame = self.cellFramesArray[indexPath.row];
     return cell;
 }
 
 #pragma mark - delegate
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0){
-    
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    LSTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    return cell.cellFrame.cellHeight;
+    LSTableViewCellFrame *cellframe = self.cellFramesArray[indexPath.row];
+    return cellframe.cellHeight;
 }
 
 #pragma mark - loadData
@@ -77,12 +79,17 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:@"http://capi.douyucdn.cn/api/v1/getColumnDetail?shortName=PCgame" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) { 
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             if ([responseObject[@"error"] integerValue] ==0) {
-                self.dataSource = [LSTCModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-                NSLog(@"respon=%@",self.dataSource);
+                NSMutableArray *tempArray = [NSMutableArray array];
+                for (NSDictionary *dic in responseObject[@"data"]) {
+                    LSTCModel *model = [LSTCModel mj_objectWithKeyValues:dic];
+                    LSTableViewCellFrame *cellFrame = [[LSTableViewCellFrame alloc] init];
+                    cellFrame.tcmodel = model;
+                    [tempArray addObject:cellFrame];
+                }
+                self.cellFramesArray = [tempArray copy];
                 [self.tableView reloadData];
             }
         }

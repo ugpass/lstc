@@ -33,7 +33,7 @@
 }
 
 - (void)setCellFrame:(LSTableViewCellFrame *)cellFrame{
-    _cellFrame = cellFrame;
+    _cellFrame = cellFrame; 
     [self setContent];
     [self setViewsFrame];
 }
@@ -41,7 +41,7 @@
 - (void)setContent{
     self.backgroundColor = [UIColor whiteColor];
     self.tagNameLabel.text = self.cellFrame.tcmodel.tag_name;
-    self.detailTagNameLabel.text = self.cellFrame.tcmodel.tag_introduce;
+    self.detailTagNameLabel.attributedText = [[NSMutableAttributedString alloc] initWithString:self.cellFrame.tcmodel.tag_introduce];;
     [self.bigImageView setImageWithURL:[NSURL URLWithString:self.cellFrame.tcmodel.icon_name] placeholder:[UIImage imageNamed:@"placeholder"]];
     [self.smallImageView setImageWithURL:[NSURL URLWithString:self.cellFrame.tcmodel.small_icon_url] placeholder:[UIImage imageNamed:@"placeholder"]];
 }

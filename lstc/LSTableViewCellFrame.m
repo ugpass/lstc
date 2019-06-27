@@ -21,7 +21,7 @@
     
     _bigImageViewFrame = CGRectMake(64, 64, 100, 100);
     
-    NSMutableAttributedString *detailText = [[NSMutableAttributedString alloc] initWithString:tcmodel.tag_introduce];
+    NSMutableAttributedString *detailTagText = [[NSMutableAttributedString alloc] initWithString:tcmodel.tag_introduce];
     
     // Create text container
     YYTextContainer *container = [YYTextContainer new];
@@ -29,11 +29,11 @@
     container.maximumNumberOfRows = 0;
     
     // Generate a text layout.
-    _detailTagNameLabelLayout = [YYTextLayout layoutWithContainer:container text:detailText];
+    YYTextLayout *detailTagNameLabelLayout = [YYTextLayout layoutWithContainer:container text:detailTagText];
     
-    _detailTagNameLabelFrame = CGRectMake(10, 174, _detailTagNameLabelLayout.textBoundingSize.width, _detailTagNameLabelLayout.textBoundingSize.height);
+    _detailTagNameLabelFrame = CGRectMake(10, 174, detailTagNameLabelLayout.textBoundingSize.width, detailTagNameLabelLayout.textBoundingSize.height);
     
-    _cellHeight = 10 + 44 + 10 + 100 + _detailTagNameLabelLayout.textBoundingSize.height + 10;
+    _cellHeight = 10 + 44 + 10 + 100 + detailTagNameLabelLayout.textBoundingSize.height + 10;
     
 }
 
